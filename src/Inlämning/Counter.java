@@ -1,9 +1,25 @@
 package Inlämning;
 
-import java.util.Scanner;
-
 public class Counter {
-    Scanner scan = new Scanner(System.in);
 
-    String text = scan.nextLine();
+    private int totalCharacters;
+    private int totalLines;
+
+    public Counter() {
+        int totalCharacters = 0;
+        int totalLines = 0;
+    }
+
+    public void Matte(String input) {
+        if (!input.equalsIgnoreCase("stop")){
+            totalCharacters += input.length();
+            totalLines++;
+        }
+    }
+
+    public void Resultat(){
+        System.out.println("Antal rader: " + totalLines);
+        System.out.println("Antal tecken: " + totalCharacters);
+    }
+
 }

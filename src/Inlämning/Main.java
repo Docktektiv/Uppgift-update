@@ -5,27 +5,24 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        Counter inputHandler = new Counter();
 
-        System.out.println("enter word");
-        String s = scanner.next();
+        Scanner scan = new Scanner(System.in);
 
-        System.out.println("enter letter");
+        while (true) {
+            String input = scan.nextLine();
 
-        char a = scanner.next().charAt(0);
-
-        int count = 0;
-
-        for(int i = 0; i < s.length(); i++){
-            if(s.charAt(i) == a){
-                count++;
+            if(input.equalsIgnoreCase("stop")) {
+                break;
             }
+
+            inputHandler.Matte(input);
         }
 
-        System.out.println(count);
+        inputHandler.Resultat();
+
+        scan.close();
 
     }
 }
 
-//Test yes hello
-//This is from GitHub
