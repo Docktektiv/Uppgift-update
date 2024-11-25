@@ -6,8 +6,6 @@ public class Counter {
     private int totalLines;
 
     public Counter() {
-        int totalCharacters = 0;
-        int totalLines = 0;
     }
 
     public void Matte(String input) {
