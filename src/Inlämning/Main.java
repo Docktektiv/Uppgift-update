@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Counter inputHandler = new Counter();
+        Counter bingo = new Counter();
 
         Scanner scan = new Scanner(System.in);
 
@@ -16,13 +16,10 @@ public class Main {
                 break;
             }
 
-            inputHandler.Matte(input);
+            bingo.Matte(input);
         }
 
-        inputHandler.Resultat();
-
-        scan.close();
-
+        bingo.Resultat();
     }
 }
 

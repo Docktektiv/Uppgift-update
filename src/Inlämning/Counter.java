@@ -5,8 +5,7 @@ public class Counter {
     private int totalCharacters;
     private int totalLines;
 
-    public Counter() {
-    }
+
 
     public void Matte(String input) {
         if (!input.equalsIgnoreCase("stop")){
