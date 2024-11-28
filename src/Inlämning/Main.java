@@ -19,7 +19,8 @@ public class Main {
             bingo.Matte(input);
         }
 
-        bingo.Resultat();
+        System.out.println("Antal rader: " + bingo.getTotalLines());
+        System.out.println("Antal tecken: " + bingo.getTotalCharacters());
     }
 }
 

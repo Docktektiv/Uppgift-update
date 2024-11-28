@@ -43,10 +43,21 @@ public class TestCases {
         counter = new Counter();
         counter.Matte("Hello");
         counter.Matte("World");
-        counter.Matte("stop");
 
         assertEquals(2, counter.getTotalLines());
         assertEquals(10, counter.getTotalCharacters());
+    }
+
+    @Test
+    void fourthTestCase() {
+
+        Counter counter;
+        counter = new Counter();
+        counter.Matte("Hello");
+
+
+        assertEquals(1, counter.getTotalLines());
+        assertEquals(5, counter.getTotalCharacters());
     }
 
 

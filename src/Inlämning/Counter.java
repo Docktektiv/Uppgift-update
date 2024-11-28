@@ -12,15 +12,11 @@ public class Counter {
         }
     }
 
-    public void Resultat(){
-        System.out.println("Antal rader: " + totalLines);
-        System.out.println("Antal tecken: " + totalCharacters);
-    }
     public int getTotalCharacters() {
-        return 10;
+        return totalCharacters;
     }
 
     public int getTotalLines() {
-        return 2;
+        return totalLines;
     }
 }
