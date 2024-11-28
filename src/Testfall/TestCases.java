@@ -1,5 +1,6 @@
 package Testfall;
 
+import Inlämning.Counter;
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -11,36 +12,42 @@ public class TestCases {
     @Test
     public void firstTestCase() {
 
-        //Test_1_text bingo = new Test_1_text();
-
-        //bingo.Test_1_text(input);
-
-        //String text = bingo.toString();
-        //int value = bingo.Test_1_text(input);
-
-        String text = "Hej!";
+        String text = "Hej på dig!";
         int value = text.length();
 
+        boolean actual;
+        boolean expected = true;
         if (value >= 10){
-            boolean actual = true;
-            boolean expected = true;
-            assertEquals(expected, actual);
+            actual = true;
 
         } else {
-            boolean actual = false;
-            boolean expected = true;
-            assertEquals(expected, actual);
+            actual = false;
         }
+        assertEquals(expected, actual);
     }
 
     @Test
     public void secondTestCase(){
 
         int[] nummer = {16, 32, 64};
-        int summa = IntStream.of(nummer).sum();
 
-        int actual = summa;
-        int expected = 112;
-        assertEquals(expected, actual);
+        int actual = IntStream.of(nummer).sum();
+        //int expected = 112;
+        assertEquals(112, actual);
     }
+
+    @Test
+    void thirdTestCase() {
+
+        Counter counter;
+        counter = new Counter();
+        counter.Matte("Hello");
+        counter.Matte("World");
+        counter.Matte("stop");
+
+        assertEquals(2, counter.getTotalLines());
+        assertEquals(10, counter.getTotalCharacters());
+    }
+
+
 }
